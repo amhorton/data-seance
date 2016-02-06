@@ -1,5 +1,8 @@
 var datacomb = require('./datacomb.json');
 var _ = require('./lib/underscore');
+var sentenceStructures = [
+	['objects', 'prepositions', 'places']
+];
 
 
 searcher = {
@@ -48,36 +51,28 @@ searcher = {
 		});
 		return wordCounts;
 	},
-	findSentence : function (text) {
-		//basic form: object, preposition, location
-		var objects = datacomb.objects;
-		var prepositions = datacomb.prepositions;
-		var places = datacomb.places;
+	findSentenceWithStructure : function (text, structure) {
+		var arrays = [];
 		var sentence = [];
-		var firstObject = searcher.findFirstWordOfType(text, objects);
-		var firstPrep;
-		var firstPlace;
 		var actualIndex = 0;
-		if (!firstObject) {
-			return false
-		}
-		sentence.push(firstObject.word.toUpperCase());
-		actualIndex += firstObject.index + 1;
-		console.log(text.slice(actualIndex));
-		firstPrep = searcher.findFirstWordOfType(text.slice(actualIndex), prepositions);
-		if (!firstPrep) {
-			return false;
-		}
-		sentence.push(firstPrep.word.toUpperCase());
-		actualIndex += firstPrep.index + 1;
-		console.log(text.slice(actualIndex));
-		firstPlace = searcher.findFirstWordOfType(text.slice(actualIndex), places);
-		if (!firstPlace) {
-			return false;
-		}
-		sentence.push(firstPlace.word.toUpperCase());
-		return sentence.join(' ');
+		var firstOfType;
 
+		structure.forEach(function (wordType) {
+			arrays.push(datacomb[wordType]);
+		})
+
+		arrays.every(function (wordArray) {
+			firstOfType = searcher.findFirstWordOfType(text.slice(actualIndex), wordArray);
+
+			if (!firstOfType) {
+				return false;
+			}
+			actualIndex += firstOfType.index + 1;
+			sentence.push(firstOfType.word.toUpperCase());
+			return true;
+		});
+
+		return sentence.length === structure.length && sentence.join(' ');
 	},
 	findFirstWordOfType : function (text, wordsToFind) {
 		//finds first word of given type
@@ -106,3 +101,5 @@ searcher = {
 		};
 	}
 };
+var text = "crown beneath crypt";
+console.log(searcher.findSentenceWithStructure(text, sentenceStructures[0]));

@@ -7,6 +7,7 @@
 		<title>DATA SEANCE</title>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 		<script type="text/javascript" src="searcher.js"></script>
 		<script type="text/javascript" src="fileUpload.js"></script>
 		<script type="text/javascript">
@@ -19,6 +20,8 @@
 				var rating = document.getElementById('rating'),
 					ratingWidth = rating.offsetWidth,
 					newWidth = ratingWidth * (spookyRatio / 100);
+
+				$(rating).width(newWidth);
 
 				console.log(rating);
 			});
@@ -33,6 +36,9 @@
 				<input type="file" class="upload" id="file" name="file">
 				<input type="submit" class="submit">
 			</form>
+			<div class="spookometer">
+				<div class="spookometer__inner" id="rating"></div>
+			</div>
 			<section id="result" class="result">
 				Results appear here
 			</section>
