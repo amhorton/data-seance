@@ -64,6 +64,12 @@ body {
 		background-image: url('../assets/spookometer.png');
 		background-size: 400px auto;
 		background-repeat: no-repeat;
+		opacity: 1;
+		transition: opacity 2s ease-in-out;
+
+		&.hide {
+			opacity: 0;
+		}
 	}
 }
 

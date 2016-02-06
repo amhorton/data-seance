@@ -7,7 +7,6 @@
 		<title>DATA SEANCE</title>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-<<<<<<< HEAD
 		<script type="text/javascript" language="javascript" src="datacomb.json"></script>
 		<script type="text/javascript" language="javascript" src="lib/underscore.js"></script>
 		<script type="text/javascript">
@@ -147,27 +146,7 @@
 				}
 			};
 		</script>
-=======
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-		<script type="text/javascript" src="searcher.js"></script>
->>>>>>> ba6094579160032bfc3426bc7c63c9879734c04d
 		<script type="text/javascript" src="fileUpload.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				// number of spooky words divided by total words
-				var spookyWords = 50,
-					totalWords = 100,
-					spookyRatio = (spookyWords / totalWords) * 100;
-
-				var rating = document.getElementById('rating'),
-					percentage = document.getElementById('percentage'),
-					ratingWidth = rating.offsetWidth,
-					newWidth = ratingWidth * (spookyRatio / 100);
-
-				$(rating).width(newWidth);
-				$(percentage).text('Spooky levels at ' + spookyRatio + '%')
-			});
-		</script>
 	</head>
 	<body>
 		<div class="mist mist1"></div>
@@ -182,7 +161,7 @@
 				<input type="submit" class="submit">
 			</form>
 			<div class="spookometer">
-				<div class="spookometer__inner" id="rating"></div>
+				<div class="spookometer__inner hide" id="rating"></div>
 				<div class="percentage" id="percentage"></div>
 			</div>
 			<section id="result" class="result">
