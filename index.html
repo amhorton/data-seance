@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>DATA SEANCE</title>
+		<title>WELCOME... TO THE DATACOMBS</title>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<script type="text/javascript" language="javascript" src="datacomb.json"></script>
@@ -13,7 +13,14 @@
 			var structures = {
 				"CLUE" : ['objects', 'prepositions', 'places'],
 				"WARNING" : ['subjects', 'prepositions', 'places'],
-				"PROPHECY" : ['objects', 'verbs', 'objects'],
+				"TIP" : ['adjectives', 'objects', 'prepositions', 'places'],
+				"FORTUNE" : ['subjects', 'verbs', 'prepositions', 'adjectives', 'places'],
+				"OMEN" : ['subjects', 'verbs', 'adjectives', 'objects', 'prepositions', 'adjectives', 'places'],
+				"PROPHECY" : ['adjectives', 'subjects', 'verbs', 'adjectives', 'objects', 'prepositions', 'adjectives', 'places'],
+				"AUGURY" : ['adjectives', 'subjects', 'verbs', 'adjectives', 'objects'],
+				"PORTENT" : ['subjects', 'verbs', 'adjectives', 'objects', 'prepositions', 'adjectives', 'places'],
+				"PREMONITION" : ['subjects', 'verbs', 'adjectives', 'objects', 'prepositions', 'adjectives', 'places'],
+				"LUCKY NUMBERS" : ['numbers', 'numbers', 'numbers', 'numbers', 'numbers']
 			};
 			searcher = window.searcher = {
 				searchForWord : function (text, wordToFind) {
@@ -165,7 +172,7 @@
 				<div class="percentage" id="percentage"></div>
 			</div>
 			<section id="result" class="result">
-				Results appear here
+				ALL WILL BE REVEALED
 			</section>
 		</div>
 	</body>
