@@ -15,7 +15,8 @@
 				reader.readAsText(file, "UTF-8");
 
 				reader.onload = function (e) {
-					console.log(e.target.result);
+					$('#result').text(e.target.result);
+					console.log($('#result'));
 				}
 			}
 
@@ -43,9 +44,9 @@
 			<form class="form" id="form" method="post" action="">
 				<input type="file" class="upload" id="file" name="file">
 				<input type="submit" class="submit">
-			<output class="result">
+			<section id="result" class="result">
 				Results appear here
-			</output>
+			</section>
 		</div>
 	</body>
 </html>
