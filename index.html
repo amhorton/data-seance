@@ -13,7 +13,7 @@
 		<script type="text/javascript">
 			$(document).ready(function () {
 				// number of spooky words divided by total words
-				var spookyWords = 90,
+				var spookyWords = 50,
 					totalWords = 100,
 					spookyRatio = (spookyWords / totalWords) * 100;
 
@@ -22,8 +22,6 @@
 					newWidth = ratingWidth * (spookyRatio / 100);
 
 				$(rating).width(newWidth);
-
-				console.log(rating);
 			});
 		</script>
 	</head>
