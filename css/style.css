@@ -22,7 +22,8 @@ body {
     height: 100px;
     width: 400px;
     background-image: url("../assets/spookometer.png");
-    background-size: auto 100px; }
+    background-size: 400px auto;
+    background-repeat: no-repeat; }
 
 .form {
   margin: 20px auto; }
