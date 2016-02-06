@@ -7,15 +7,29 @@ var fileUpload = {
 		reader.onload = function (e) {
 			console.log('loaded');
 			var result = e.target.result;
-			// var utterance = searcher.searchForSentencesWithStructures(result, [
-			// 		"CLUE",
-			// 		"WARNING",
-			// 		"PROPHECY"
-			// ]);
-			var utterance = searcher.findSpookQuotient(result);
-			console.log(utterance);
-			$('#result').text(utterance);
+			var utterance = searcher.searchForSentencesWithStructures(result, [
+					"CLUE",
+					"WARNING",
+					"TIP",
+					"FORTUNE",
+					"OMEN",
+					"PROPHECY",
+					"AUGURY",
+					"PORTENT",
+					"PREMONITION",
+					"LUCKY NUMBERS"
+			]);
+			$('#result').html(fileUpload.translateUtteranceToText(utterance));
 		}
+	},
+	translateUtteranceToText : function (utterance) {
+		var utterances = [];
+		_.keys(utterance).forEach(function (sentenceType) {
+			if (utterance[sentenceType]) {
+				utterances.push("<p class='result-sentence'>" + sentenceType + ": " + utterance[sentenceType] + "</p>");
+			}
+		})
+		return utterances.join('<br>');
 	}
 }
 

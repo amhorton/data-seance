@@ -81,6 +81,7 @@ body {
 		width: 486px;
 		height: 228px;
 		animation: hover1 5s infinite;
+		z-index: -1000
 	}
 	&.mist2 {
 		background-image: url('../assets/mist2.png');
@@ -90,6 +91,7 @@ body {
 		width: 571px;
 		height: 336px;
 		animation: hover2 3s infinite;
+		z-index: -1000
 	}
 }
 
