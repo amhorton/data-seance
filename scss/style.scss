@@ -1,3 +1,35 @@
+@keyframes hover1 {
+	0% {
+		margin-top: 0;
+	}
+
+	50% {
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	100% {
+		margin-top: 0;
+		margin-left: 0;
+	}
+}
+
+@keyframes hover2 {
+	0% {
+		margin-top: 0;
+	}
+
+	50% {
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+
+	100% {
+		margin-top: 0;
+		margin-left: 0;
+	}
+}
+
 $bg: #252525;
 $fg: #dedede;
 
@@ -49,6 +81,7 @@ body {
 		opacity: 0.4;
 		width: 486px;
 		height: 228px;
+		animation: hover1 5s infinite;
 	}
 	&.mist2 {
 		background-image: url('../assets/mist2.png');
@@ -57,6 +90,7 @@ body {
 		opacity: 0.2;
 		width: 571px;
 		height: 336px;
+		animation: hover2 3s infinite;
 	}
 }
 
