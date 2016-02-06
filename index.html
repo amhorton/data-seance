@@ -9,10 +9,26 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<script type="text/javascript" src="searcher.js"></script>
 		<script type="text/javascript">
+			function readFile(file) {
+				var reader = new FileReader();
+
+				reader.readAsText(file, "UTF-8");
+
+				reader.onload = function (e) {
+					console.log(e.target.result);
+				}
+			}
 
 			$(document).ready(function () {
 				$('#form').submit(function (e) {
-					console.log('Submitted');
+					var file = document.getElementById('file').files[0];
+
+					if (file) {
+						readFile(file);
+					} else {
+						console.log("Where's the file???");
+					}
+
 					// keep the browser from reloading
 					e.preventDefault();
 				});
@@ -25,7 +41,7 @@
 				<h1>DATA SEANCE</h1>
 			</header>
 			<form class="form" id="form" method="post" action="">
-				<input type="file" class="upload" name="file">
+				<input type="file" class="upload" id="file" name="file">
 				<input type="submit" class="submit">
 			<output class="result">
 				Results appear here
