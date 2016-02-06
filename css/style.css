@@ -25,6 +25,26 @@ body {
     background-size: 400px auto;
     background-repeat: no-repeat; }
 
+.mist {
+  height: 400px;
+  width: 400px;
+  position: fixed;
+  background-repeat: no-repeat; }
+  .mist.mist1 {
+    background-image: url("../assets/mist1.png");
+    top: 20px;
+    left: 10px;
+    opacity: 0.4;
+    width: 486px;
+    height: 228px; }
+  .mist.mist2 {
+    background-image: url("../assets/mist2.png");
+    top: 200px;
+    right: 0px;
+    opacity: 0.2;
+    width: 571px;
+    height: 336px; }
+
 .form {
   margin: 20px auto; }
 
