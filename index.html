@@ -18,10 +18,12 @@
 					spookyRatio = (spookyWords / totalWords) * 100;
 
 				var rating = document.getElementById('rating'),
+					percentage = document.getElementById('percentage'),
 					ratingWidth = rating.offsetWidth,
 					newWidth = ratingWidth * (spookyRatio / 100);
 
 				$(rating).width(newWidth);
+				$(percentage).text('Spooky levels at ' + spookyRatio + '%')
 			});
 		</script>
 	</head>
@@ -39,6 +41,7 @@
 			</form>
 			<div class="spookometer">
 				<div class="spookometer__inner" id="rating"></div>
+				<div class="percentage" id="percentage"></div>
 			</div>
 			<section id="result" class="result">
 				Results appear here

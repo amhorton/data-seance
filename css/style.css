@@ -33,9 +33,8 @@ body {
   margin: 40px auto; }
 
 .spookometer {
-  height: 100px;
   width: 400px;
-  margin: 0 auto; }
+  margin: 40px auto; }
   .spookometer__inner {
     height: 100px;
     width: 400px;
