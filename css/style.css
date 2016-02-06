@@ -41,6 +41,8 @@ body {
     background-image: url("../assets/spookometer.png");
     background-size: 400px auto;
     background-repeat: no-repeat; }
+    .spookometer__inner.hide {
+      opacity: 0; }
 
 .mist {
   height: 400px;
