@@ -29,7 +29,8 @@ var fileUpload = {
 			// number of spooky words divided by total words
 			var spookyWords = spookQuotient.spookCount,
 				totalWords = spookQuotient.totalCount,
-				spookyRatio = (spookyWords / totalWords) * 10;
+				spookyMultiplier = _.sample([1, 5, 10, 15, 20, 25])
+				spookyRatio = Math.sqrt((spookyWords / totalWords) * 10) * spookyMultiplier;
 
 			var rating = document.getElementById('rating'),
 				percentage = document.getElementById('percentage'),
