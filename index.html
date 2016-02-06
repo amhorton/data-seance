@@ -9,6 +9,20 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<script type="text/javascript" src="searcher.js"></script>
 		<script type="text/javascript" src="fileUpload.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				// number of spooky words divided by total words
+				var spookyWords = 90,
+					totalWords = 100,
+					spookyRatio = (spookyWords / totalWords) * 100;
+
+				var rating = document.getElementById('rating'),
+					ratingWidth = rating.offsetWidth,
+					newWidth = ratingWidth * (spookyRatio / 100);
+
+				console.log(rating);
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container">

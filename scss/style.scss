@@ -22,6 +22,19 @@ body {
 	margin: 40px auto;
 }
 
+.spookometer {
+	height: 100px;
+	width: 400px;
+	margin: 0 auto;
+
+	&__inner {
+		height: 100px;
+		width: 400px;
+		background-image: url('../assets/spookometer.png');
+		background-size: auto 100px;
+	}
+}
+
 .form {
 	margin: 20px auto;
 }
