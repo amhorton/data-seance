@@ -1,3 +1,6 @@
+@font-face {
+  font-family: 'Xfiles';
+  src: url("../x-files.ttf") format("truetype"); }
 @keyframes hover1 {
   0% {
     margin-top: 0; }
@@ -22,7 +25,8 @@
 
 body {
   background-color: #252525;
-  color: #dedede; }
+  color: #dedede;
+  font-family: 'Xfiles'; }
 
 .container {
   margin: 0 auto;
@@ -40,7 +44,7 @@ body {
     width: 400px;
     background-image: url("../assets/spookometer.png");
     background-size: 400px auto;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     opacity: 1;
     transition: opacity 2s ease-in-out; }
     .spookometer__inner.hide {
@@ -50,7 +54,8 @@ body {
   height: 400px;
   width: 400px;
   position: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  pointer-events: none; }
   .mist.mist1 {
     background-image: url("../assets/mist1.png");
     top: 20px;
@@ -58,7 +63,8 @@ body {
     opacity: 0.4;
     width: 486px;
     height: 228px;
-    animation: hover1 5s infinite; }
+    animation: hover1 5s infinite;
+    z-index: -1000; }
   .mist.mist2 {
     background-image: url("../assets/mist2.png");
     top: 200px;
@@ -66,7 +72,8 @@ body {
     opacity: 0.2;
     width: 571px;
     height: 336px;
-    animation: hover2 3s infinite; }
+    animation: hover2 3s infinite;
+    z-index: -1000; }
 
 .form {
   margin: 20px auto; }

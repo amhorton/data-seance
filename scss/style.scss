@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Xfiles';
+	src: url('../x-files.ttf') format('truetype');
+}
+
 @keyframes hover1 {
 	0% {
 		margin-top: 0;
@@ -42,6 +47,7 @@ $fg: #dedede;
 body {
 	background-color: $bg;
 	color: $fg;
+	font-family: 'Xfiles';
 }
 
 .container {
@@ -63,7 +69,7 @@ body {
 		width: 400px;
 		background-image: url('../assets/spookometer.png');
 		background-size: 400px auto;
-		background-repeat: no-repeat;
+		background-repeat: repeat-x;
 		opacity: 1;
 		transition: opacity 2s ease-in-out;
 
@@ -78,6 +84,7 @@ body {
 	width: 400px;
 	position: fixed;
 	background-repeat: no-repeat;
+	pointer-events: none;
 
 	&.mist1 {
 		background-image: url('../assets/mist1.png');
@@ -87,6 +94,7 @@ body {
 		width: 486px;
 		height: 228px;
 		animation: hover1 5s infinite;
+		z-index: -1000
 	}
 	&.mist2 {
 		background-image: url('../assets/mist2.png');
@@ -96,6 +104,7 @@ body {
 		width: 571px;
 		height: 336px;
 		animation: hover2 3s infinite;
+		z-index: -1000
 	}
 }
 
