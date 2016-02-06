@@ -5,7 +5,15 @@ var fileUpload = {
 		reader.readAsText(file, "UTF-8");
 
 		reader.onload = function (e) {
-			var utterance = searcher.search(e.target.result);
+			console.log('loaded');
+			var result = e.target.result;
+			// var utterance = searcher.searchForSentencesWithStructures(result, [
+			// 		"CLUE",
+			// 		"WARNING",
+			// 		"PROPHECY"
+			// ]);
+			var utterance = searcher.findSpookQuotient(result);
+			console.log(utterance);
 			$('#result').text(utterance);
 		}
 	}

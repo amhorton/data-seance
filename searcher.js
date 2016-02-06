@@ -1,3 +1,4 @@
+function () {
 var datacomb = require('./datacomb.json');
 var _ = require('./lib/underscore');
 var sentenceStructures = [
@@ -5,7 +6,7 @@ var sentenceStructures = [
 ];
 
 
-searcher = {
+searcher = window.searcher = {
 	searchForWord : function (text, wordToFind) {
 		//returns location of word by index of last letter, returns false if
 		//word is not found
@@ -101,5 +102,4 @@ searcher = {
 		};
 	}
 };
-var text = "crown beneath crypt";
-console.log(searcher.findSentenceWithStructure(text, sentenceStructures[0]));
+}();
