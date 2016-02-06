@@ -18,7 +18,12 @@ var fileUpload = {
 					"AUGURY",
 					"PORTENT",
 					"PREMONITION",
-					"LUCKY NUMBERS"
+					"LUCKY NUMBERS",
+					"FYI",
+					"PROGNOSTICATION",
+					"FOREBODING",
+					"INKLING",
+					"HEADS UP"
 			], 4));
 			$('#result').html(fileUpload.translateUtteranceToText(utterance));
 			// number of spooky words divided by total words
