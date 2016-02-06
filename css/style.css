@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #252525;
+  color: #dedede; }
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center; }
+
+.header {
+  margin: 40px auto; }
+
+.form {
+  margin: 20px auto; }
+
+.upload,
+.submit {
+  display: block;
+  margin: 10px auto; }
+
+.result {
+  padding: 40px; }
+
+/*# sourceMappingURL=style.css.map */
