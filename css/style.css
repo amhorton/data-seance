@@ -54,7 +54,8 @@ body {
   height: 400px;
   width: 400px;
   position: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  pointer-events: none; }
   .mist.mist1 {
     background-image: url("../assets/mist1.png");
     top: 20px;

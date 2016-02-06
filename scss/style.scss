@@ -84,6 +84,7 @@ body {
 	width: 400px;
 	position: fixed;
 	background-repeat: no-repeat;
+	pointer-events: none;
 
 	&.mist1 {
 		background-image: url('../assets/mist1.png');
