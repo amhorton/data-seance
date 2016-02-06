@@ -78,6 +78,10 @@ body {
 .form {
   margin: 20px auto; }
 
+.hidden {
+  display : none;
+}
+
 .upload,
 .submit {
   display: block;
