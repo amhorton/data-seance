@@ -7,12 +7,8 @@ var fileUpload = {
 		reader.onload = function (e) {
 			console.log('loaded');
 			var result = e.target.result;
-<<<<<<< HEAD
-			var utterance = searcher.searchForSentencesWithStructures(result, _.sample([
-=======
 			var spookQuotient = searcher.findSpookQuotient(result);
-			var utterance = searcher.searchForSentencesWithStructures(result, [
->>>>>>> 3a8a15d14fa13cefa94dca5d9b1af5d593f58577
+			var utterance = searcher.searchForSentencesWithStructures(result, _.sample([
 					"CLUE",
 					"WARNING",
 					"TIP",
