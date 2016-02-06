@@ -15,8 +15,8 @@
 				reader.readAsText(file, "UTF-8");
 
 				reader.onload = function (e) {
-					$('#result').text(e.target.result);
-					console.log($('#result'));
+					var utterance = searcher.search(e.target.result);
+					$('#result').text(utterance);
 				}
 			}
 
