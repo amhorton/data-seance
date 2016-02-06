@@ -1,3 +1,35 @@
+@keyframes hover1 {
+	0% {
+		margin-top: 0;
+	}
+
+	50% {
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	100% {
+		margin-top: 0;
+		margin-left: 0;
+	}
+}
+
+@keyframes hover2 {
+	0% {
+		margin-top: 0;
+	}
+
+	50% {
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+
+	100% {
+		margin-top: 0;
+		margin-left: 0;
+	}
+}
+
 $bg: #252525;
 $fg: #dedede;
 
@@ -20,6 +52,45 @@ body {
 
 .header {
 	margin: 40px auto;
+}
+
+.spookometer {
+	width: 400px;
+	margin: 40px auto;
+
+	&__inner {
+		height: 100px;
+		width: 400px;
+		background-image: url('../assets/spookometer.png');
+		background-size: 400px auto;
+		background-repeat: no-repeat;
+	}
+}
+
+.mist {
+	height: 400px;
+	width: 400px;
+	position: fixed;
+	background-repeat: no-repeat;
+
+	&.mist1 {
+		background-image: url('../assets/mist1.png');
+		top: 20px;
+		left: 10px;
+		opacity: 0.4;
+		width: 486px;
+		height: 228px;
+		animation: hover1 5s infinite;
+	}
+	&.mist2 {
+		background-image: url('../assets/mist2.png');
+		top: 200px;
+		right: 0px;
+		opacity: 0.2;
+		width: 571px;
+		height: 336px;
+		animation: hover2 3s infinite;
+	}
 }
 
 .form {
