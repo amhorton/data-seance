@@ -8,33 +8,7 @@
 		<link href="css/style.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 		<script type="text/javascript" src="searcher.js"></script>
-		<script type="text/javascript">
-			function readFile(file) {
-				var reader = new FileReader();
-
-				reader.readAsText(file, "UTF-8");
-
-				reader.onload = function (e) {
-					var utterance = searcher.search(e.target.result);
-					$('#result').text(utterance);
-				}
-			}
-
-			$(document).ready(function () {
-				$('#form').submit(function (e) {
-					var file = document.getElementById('file').files[0];
-
-					if (file) {
-						readFile(file);
-					} else {
-						console.log("Where's the file???");
-					}
-
-					// keep the browser from reloading
-					e.preventDefault();
-				});
-			});
-		</script>
+		<script type="text/javascript" src="fileUpload.js"></script>
 	</head>
 	<body>
 		<div class="container">
