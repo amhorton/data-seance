@@ -8,7 +8,7 @@ var fileUpload = {
 			console.log('loaded');
 			var result = e.target.result;
 			var spookQuotient = searcher.findSpookQuotient(result);
-			var utterance = searcher.searchForSentencesWithStructures(result, [
+			var utterance = searcher.searchForSentencesWithStructures(result, _.sample([
 					"CLUE",
 					"WARNING",
 					"TIP",
@@ -19,7 +19,7 @@ var fileUpload = {
 					"PORTENT",
 					"PREMONITION",
 					"LUCKY NUMBERS"
-			]);
+			], 4));
 			$('#result').html(fileUpload.translateUtteranceToText(utterance));
 			// number of spooky words divided by total words
 			var spookyWords = spookQuotient.spookCount,
