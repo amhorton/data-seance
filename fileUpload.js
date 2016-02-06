@@ -7,7 +7,12 @@ var fileUpload = {
 		reader.onload = function (e) {
 			console.log('loaded');
 			var result = e.target.result;
+<<<<<<< HEAD
 			var utterance = searcher.searchForSentencesWithStructures(result, _.sample([
+=======
+			var spookQuotient = searcher.findSpookQuotient(result);
+			var utterance = searcher.searchForSentencesWithStructures(result, [
+>>>>>>> 3a8a15d14fa13cefa94dca5d9b1af5d593f58577
 					"CLUE",
 					"WARNING",
 					"TIP",
@@ -21,14 +26,18 @@ var fileUpload = {
 			], 4));
 			$('#result').html(fileUpload.translateUtteranceToText(utterance));
 			// number of spooky words divided by total words
-			var spookyWords = utterance.spookCount,
-				totalWords = utterance.totalCount,
+			var spookyWords = spookQuotient.spookCount,
+				totalWords = spookQuotient.totalCount,
 				spookyRatio = (spookyWords / totalWords) * 10;
 
 			var rating = document.getElementById('rating'),
 				percentage = document.getElementById('percentage'),
-				ratingWidth = $(rating)[0].offsetWidth,
+				ratingWidth = 400,
 				newWidth = ratingWidth * (spookyRatio / 100);
+
+			console.log('Spooky words: ' + spookyWords);
+			console.log('Total words: ' + totalWords);
+			console.log('Spooky ratio: ' + spookyRatio);
 
 			$(rating).removeClass('hide');
 			$(rating).width(newWidth);
